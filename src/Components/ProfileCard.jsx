@@ -9,7 +9,7 @@ export default function ProfileCard({ employeeId ,employee}) {
     const fetchEmployeeData = async () => {
       if (employeeId) {
         try {
-          const response = await axios.get(`http://localhost:8080/api/employees/${employeeId}`);
+          const response = await axios.get(`https://maniorganizationsheet-dufjh2b8drcgh0hq.canadacentral-01.azurewebsites.net/api/employees/${employeeId}`);
           setEmployeeData(response.data);
         } catch (error) {
           console.error('Error fetching employee data:', error);
